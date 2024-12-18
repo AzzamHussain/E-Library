@@ -1,4 +1,6 @@
+import 'package:e_books_app/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/get_utils.dart';
 
 class Welcomepage extends StatefulWidget {
   const Welcomepage({super.key});
@@ -20,7 +22,12 @@ class _WelcomepageState extends State<Welcomepage> {
               child: Column(
                 children: [
                   Image.asset("assets/images/welcomePage.png"),
-                  Text("Welcome to our page")
+                  Text("E-Book Store",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineLarge
+                          ?.copyWith(
+                              color: Theme.of(context).colorScheme.background)),
                 ],
               ),
             ),
