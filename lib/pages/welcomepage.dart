@@ -1,6 +1,8 @@
 import 'package:e_books_app/pages/homepage.dart';
 import 'package:e_books_app/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/get_utils/get_utils.dart';
 
 class Welcomepage extends StatefulWidget {
@@ -14,13 +16,9 @@ class _WelcomepageState extends State<Welcomepage> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 4), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  Homepage()) // Replace Homepage() with your homepage widget
-          );
+      Get.offAll(() => Homepage()); // Use GetX to navigate and clear all previous routes
     });
+     
   }
 
   @override
