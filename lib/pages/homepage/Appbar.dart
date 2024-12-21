@@ -16,7 +16,13 @@ class HomeAppBar extends StatelessWidget {
           height: 40,
           fit: BoxFit.cover,
         ),
-        Text("E-Book"),
+        Text(
+          "E-Book",
+          style: Theme.of(context)
+              .textTheme
+              .bodyLarge
+              ?.copyWith(color: Theme.of(context).colorScheme.background),
+        ),
         CircleAvatar(
           backgroundColor: Theme.of(context).colorScheme.background,
           child: Text(

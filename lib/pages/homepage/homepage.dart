@@ -26,14 +26,32 @@ class Homepage extends StatelessWidget {
                       HomeAppBar(),
                       Row(
                         children: [
+                          SizedBox(
+                            height: 15,
+                          ),
                           Text(
                             "Good Morning",
-                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).colorScheme.background
-                          ),),
-                          SizedBox(
-                            width: 20,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge
+                                ?.copyWith(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .background),
                           ),
-                          Text("Azzam"),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Text(
+                            "Azzam",
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineMedium
+                                ?.copyWith(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .background),
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -43,7 +61,15 @@ class Homepage extends StatelessWidget {
                         children: [
                           Flexible(
                               child: Text(
-                                  "Time to read book and enhance your knowledge")),
+                            "Time to read book and enhance your knowledge",
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelMedium
+                                ?.copyWith(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .background),
+                          )),
                         ],
                       ),
                     ],
