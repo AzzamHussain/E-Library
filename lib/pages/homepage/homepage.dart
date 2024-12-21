@@ -1,3 +1,4 @@
+import 'package:e_books_app/pages/homepage/Appbar.dart';
 import 'package:e_books_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -22,24 +23,27 @@ class Homepage extends StatelessWidget {
                       SizedBox(
                         height: 60,
                       ),
+                      HomeAppBar(),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            "assets/images/dashboard.png",
-                            width: 40,
-                            height: 40,
-                            fit: BoxFit.cover,
+                          Text(
+                            "Good Morning",
+                            style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Theme.of(context).colorScheme.background
+                          ),),
+                          SizedBox(
+                            width: 20,
                           ),
-                          Text("E-Book"),
-                          CircleAvatar(
-                            backgroundColor:
-                                Theme.of(context).colorScheme.background,
-                            child: Text(
-                              "A",
-                              style: TextStyle(color: fontColor),
-                            ),
-                          )
+                          Text("Azzam"),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: [
+                          Flexible(
+                              child: Text(
+                                  "Time to read book and enhance your knowledge")),
                         ],
                       ),
                     ],
